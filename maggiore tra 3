@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<body>
+<input type=number id=A value=15 /><br>
+<input type=number id=B value=12 /><br>
+<input type=number id=C value=19 /><br>
+<input type=button value=ok onclick="maxminmed();" />
+<div id="OT"></div><br>
+
+<script>
+function maxminmed(){
+var a, b, c,max ;
+
+a=parseInt(A.value);
+b=parseInt(B.value);
+c=parseInt(C.value);
+
+if(a>b){max=a;}
+else {max=b;}
+
+if(c>max){max=c;}
+
+OT.innerHTML='max:'+max+' max:'+max+' max:'+max;
+}
+</script>
+</body>
+</html>
