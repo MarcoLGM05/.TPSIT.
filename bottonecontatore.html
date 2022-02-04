@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>conto i click che avvengono in 10 secondi</title>
+<p>--Bottone contatore--</p>
+    <style>
+#miodiv{
+    height: 150px;
+    width: 150px;
+    background-color: rgb(16, 218, 26);
+}
+#miobutton{
+background-color: purple;
+height: 50px;
+width: 50px;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+background-size: 3px;
+background-size color: black;
+
+}
+    </style>
+</head>
+<body>
+    <span><a href="#" ></a></span>
+    <p id="miocountdown"></p>
+    <div id="miodiv">
+
+<button id="miobutton" onclick="contaiclick()">
+ 
+</body>
+
+
+
+    
+ <p id="mioout1"></p> 
+ 
+
+</button>   
+
+
+
+
+    </div>
+    <script>
+        
+let contatore=0
+function contaiclick(){
+
+    contatore++;
+document.getElementById("mioout1").innerHTML=contatore.toString();
+ cambiasfondoaldiv();
+}
+function cambiasfondoaldiv(){
+document.getElementById("miodiv").style.backgroundColor="red";
+}
+
+
+
+    </script>
+</body>
+</html>
