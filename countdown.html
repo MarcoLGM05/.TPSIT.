@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conto i click che avvengono in 10 secondi</title>
+    <p>Eseguo il countdown   </p>
+    <style>
+
+    
+        #miodiv
+        {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(27, 223, 27);
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<p id="miocountdown"></p>
+<div id="miodiv">
+
+    <button id="miobutton" onclick=" contaclick()"> 
+
+        <p id="mioout1"></p>
+    </button>
+
+</div>
+<script>
+    mioIntervallo=setInterval(startCountDown, 1000);
+        let countdown=3;
+        
+        function startCountDown() {
+            document.getElementById("miocountdown").innerHTML=countdown.toString();
+            countdown--;
+            if(countdown==-1)
+            {
+              clearInterval(mioIntervallo);
+            }
+    
+        }       
+    let contatore=0;
+    function contaclick (){
+        contatore++;
+        document .getElementById("mioout1").innerHTML=contatore.toString();
+        cambiasfondoaldiv();
+
+    }
+    function cambiasfondoaldiv(){
+        document.getElementById("miodiv").style.backgroundColor="red";
+    }
+</script>
+</html>
