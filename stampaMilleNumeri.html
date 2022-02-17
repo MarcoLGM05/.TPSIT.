@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #es1{
+
+        height: 200px;
+        width: 200px;
+        border: 1px solid rgb(111, 221, 88);
+        background-color: rgb(221, 235, 26);
+        }
+    
+        #box{ 
+        width: 30px;
+        height : 30px;
+        background-color: rgb(255, 19, 19);
+        border-radius: 50%; 
+        margin: 240px;
+        right:50%;
+        float: left;
+        position: absolute;
+            }
+
+</style>
+
+</head>
+<body>
+
+
+    <div id="es1">
+       <input type="text">
+       <button onclick="lancio(15)">lancio</button>
+       <p id="outes1">.....</p>
+       <div id="box">
+
+    <script>
+        function lancio(numfacce) {
+let dado=0;
+
+for (let i = 0; i < 1000; i++) {
+  
+dado=Math.round((Math.random()*(numfacce-1))+1);
+document.getElementById("outes1").innerHTML=document.getElementById("outes1").innerHTML+"<br>"+dado;
+if(dado>(numfacce/2)){
+document.getElementById("box").style.backgroundColor="red";}
+if(dado<(numfacce/2)){
+document.getElementById("box").style.backgroundColor="white";}
+}
+}
+       
+    </script>
+     
+</body>
+</html>
