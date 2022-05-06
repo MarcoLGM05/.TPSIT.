@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css&quot; rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+   
+  </head>
+  <body>
+    <div class="container-fluid">
+        <h1>Fattorizzatore di base</h1>
+        <p>estremoSuperiore</p>
+        <input id="mioinput" type="text">
+        <p>estrmoInferiore</p>
+        <input id="Text1" type="text">
+        <br>
+      <button onclick="EseguiCodice();" id="miobottone">Cerca i fattori</button>
+      <button onclick="NumeriPiu2Fattori();" id="Button1">Cerca i numeri con piu di 2 fattori</button>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+ 
+// 1)
+//modificare inserendo l'estremo inferiore come input e mettere in funzione
+//trovare i fattori tra 100 e 200 
+ 
+function EseguiCodice() {
+    let estremoSuperiore=0;
+    let estrmoInferiore=0;
+    estrmoInferiore=document.getElementById("Text1").value;
+    estremoSuperiore=document.getElementById("mioinput").value;
+    document.write("Fattorizza i numeri fino a : "+estremoSuperiore);
+    document.write("<br>");
+    for(let i=estrmoInferiore;i<=estremoSuperiore;i++)
+       {
+        document.write("<span>"+ i+" </span> <br>");  
+        document.write("<span>    Fattori: "+fattorizzatore(i)+" </span><br>");  
+       }
+    //document.write("<span>"+fattorizzatore(in1)+"</span>");
+    document.write("<br>");
+}
+
+        function fattorizzatore(n)
+        {
+          let fattore=1;
+          let fattoriOUT="";
+          let contafattori=1;
+           for(fattore=1;fattore<=n/2;fattore++)
+           {
+               if(n%fattore==0)
+               {
+                 fattoriOUT=fattoriOUT+fattore+ " ";
+                 contafattori++;
+               }
+           }
+          return fattoriOUT+ " #"+contafattori;  
+        }  
+        
+        
+//        2)inserire un nuovo bottone che mi stampa solamente i numeri con piu di 2 fattori
+
+        function NumeriPiu2Fattori()
+        {
+            let num=0;
+            for(let i=num;i<=100;i++)
+            {
+                NumPrimSI=diversoNumPrimo(i);
+                if(NumPrimSI!=1)
+                {
+                    document.write("<span>"+ i+" </span> <br>");
+                    document.write("<span>    Fattori: "+ i+" "+fattorizzatore(i)+"</span><br>"); 
+                }
+            }
+        }
+        
+            function diversoNumPrimo(num)
+            {
+                let diversoNumPrimo=0;
+                let NumPrimSI=0;
+                for(let i=num; i>0; i--)
+                {
+                    if(num%i==0)
+                    {
+                        if(i==1 || i==num){}
+                        else
+                        {
+                            diversoNumPrimo++; 
+                        }
+
+                    }
+                }
+                if(diversoNumPrimo==0)
+                {
+                    NumPrimSI=1;
+                }
+                return NumPrimSI;
+            }
+            
+
+        
+        
+       </script>
+  </body>
+</html>
