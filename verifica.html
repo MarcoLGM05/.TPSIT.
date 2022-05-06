@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <a href="https://marcologioco05.altervista.org/"></a>
+      <a href="https://marcolgm05.github.io/.TPSIT./"></a>
+      <a href="https://marcolgm05.github.io/.TPSIT./bookstrap.html"></a>
+    <button onclick="prodotto()" >stampa juve merda</button>
+    <button onclick="numprimi()" >numero primo dopo 840</button>
+    <button onclick="numprimo()" >moltiplicare il numero</button>
+    <button onclick="prodo()" >fattorizzare il risultato</button>
+    <script>
+        function prodotto(){
+
+let n=840
+let moltiplicazione=0;
+let fattore=1;
+let fattoriOUT="";
+
+for(fattore=1;fattore<=n/2;fattore++)
+        {
+              if(n%fattore==0)
+              {
+                 fattoriOUT=fattoriOUT+fattore+" "+"juvemerda";
+              }
+        }
+document.write(840+"ha"+fattoriOUT)
+}
+function numprimi(){
+let n=853;
+let div=1;
+let conta=0;
+while(conta<=1 && div<=n/2) {    
+if(n%div==0)  
+{
+            conta++;
+}   
+        div++;
+    }
+
+document.write("il numero primo dopo 840 e'"+n)
+}
+function numprimo(){
+let n=1000003;
+let div=1;
+let conta=0;
+while(conta<=1 && div<=n/2) {    
+if(n%div==0)  
+{
+            conta++;
+}   
+        div++;
+    }
+
+document.write("il numero primo dopo 1000000 e'"+n+"il risultato della moltiplicazione è")
+moltiplicazione=1000003*853;
+
+document.write(moltiplicazione)
+}
+function prodo(){
+
+let n=85302559;
+let fattore=1;
+let fattoriOUT="";
+
+for(fattore=1;fattore<=n/2;fattore++)
+        {
+              if(n%fattore==0)
+              {
+                 fattoriOUT=fattoriOUT+fattore+" ";
+              }
+        }
+document.write(85302559+"ha"+fattoriOUT)
+}
+    </script>
+</body>
+</html>
