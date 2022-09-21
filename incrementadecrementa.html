@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>INCREMENTA E DECREMENTA</h1>
+
+
+<style>
+    
+    #GeneralBox{
+     border:3px solid rgb(0, 0, 0);
+     background-color: #004EFF;
+     width: 325px;
+     height : 550px;
+     padding : 0px;
+     }
+ 
+   .box1 { 
+     height:20px;
+     width:20px;
+     border: 3px solid black;
+     background-color: white;
+     margin:20px;
+     padding:20px;
+     float: left;
+     background-color :#f00c0c
+    
+   }
+   .box2{ 
+     height:20px;
+     width:20px;
+     border: 3px solid black;
+     background-color: white;
+     margin:20px;
+     padding:20px;
+     float: left;
+     background-color: #0ca8f0
+   }
+   .box3{ 
+     height:20px;
+     width:20px;
+     border: 3px solid black;
+     background-color: white;
+     margin:20px;
+     padding:20px;
+     float: left;
+     background-color :#f00c0c
+   } 
+.box4{ 
+     height:20px;
+     width:20px;
+     border: 3px solid black;
+     background-color: white;
+     margin:20px;
+     padding:20px;
+     float: left;
+     background-color : #0ca8f0
+   } 
+    
+.box5{ 
+     height:20px;
+     width:20px;
+     border: 3px solid black;
+     background-color: white;
+     margin:20px;
+     padding:20px;
+     float: left;
+     background-color :#f00c0c
+   } 
+    
+.box6{ 
+     height:20px;
+     width:20px;
+     border: 3px solid black;
+     background-color: white;
+     margin:20px;
+     padding:20px;
+     float: left;
+     background-color : #0ca8f0
+   } 
+    
+.box7{ 
+     height:20px;
+     width:20px;
+     border: 3px solid black;
+     background-color: white;
+     margin:20px;
+     padding:20px;
+     float: left;
+     background-color :#f00c0c
+   } 
+    
+.box8{ 
+     height:20px;
+     width:20px;
+     border: 3px solid black;
+     background-color: white;
+     margin:20px;
+     padding:20px;
+     float: left;
+     background-color : #0ca8f0
+   } 
+    
+.box9{ 
+     height:20px;
+     width:20px;
+     border: 3px solid black;
+     background-color: white;
+     margin:20px;
+     padding:20px;
+     float: left;
+     background-color :#f00c0c
+   } 
+
+    .box10 {
+     height:150px;
+     width:235px;
+     background-color: grey;
+     margin: 20px;
+     padding: 20px;
+     float: left;
+     border: 3px solid black;
+    }
+
+    
+  </style>
+  </body>
+ 
+ <div id = "GeneralBox">
+
+
+<div class="box1">
+    
+  </div>
+ 
+   <div class="box2"><button type="button1" onclick=" contaclick()"> ↑</button>
+   
+   </div>
+   <div class="box3">
+    
+   </div>
+
+   <div class="box4"><button type="button2" onclick=" contareclick()" button id="b1"> ←</button>
+     
+   </div>
+ <div class="box5">
+    
+   </div>
+<div class="box6"><button type="button3" onclick=" conta2()"> →</button>
+    
+    </div>
+<div class="box7">
+    
+   </div>
+ <div class="box8"><button type="button4" onclick=" conta1()"> ↓</button>
+    
+    
+   </div>
+
+   <div class="box9">
+    
+    
+   </div>
+
+   <div class="box10">
+    verticale <p id="mioout1"> </p>
+    orizzontale <p id="mioout2"></p>
+    
+   </div>
+
+</style>
+
+</head>
+</body>
+<script>
+  let contatore=0;
+    function contaclick (){
+        contatore++;
+        document .getElementById("mioout1").innerHTML=contatore.toString();
+    }
+    function conta1 (){
+        contatore--;
+        document .getElementById("mioout1").innerHTML=contatore.toString();
+    }
+
+    function conta2 (){
+        conta++;
+        document .getElementById("mioout2").innerHTML=conta.toString();
+    }
+     let conta=0;
+    function contareclick (){
+        conta--;
+        document .getElementById("mioout2").innerHTML=conta.toString();
+    }
+   
+</script>
+
+</html>
