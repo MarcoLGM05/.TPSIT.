@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ripassoJavaS</title>
+</head>
+<style>
+    div{
+        position: absolute;
+        height: 60px;
+        width: 60px;
+        background-color: rgb(14, 34, 136);
+        border: 2px solid rgb(75, 83, 83);
+        top: 20px;
+    }
+</style>
+
+
+<script>
+   function ORDINA(){
+   let divs = document.getElementsByName("DIV")
+   for(let i=0;i<divs.length;i++){
+       divs[i].style.left = i*75 + 'px'
+   }
+   SPOSTAMENTO()
+}
+
+async function SPOSTAMENTO(){
+   let divs = document.getElementsByName("DIV")
+   for(let i=4;i>=0;i--){
+       let left = i*75
+       for(let j=0;j<20;j++){
+           divs[i].style.left = left + 'px'
+           left += 5
+           await sleep(50)
+       }
+   }
+}
+
+function sleep(ms) {
+   return new Promise(resolve => setTimeout(resolve, ms));
+}
+</script>
+
+<body onload="ORDINA()">
+   <div name="DIV"></div>
+   <div name="DIV"></div>
+   <div name="DIV"></div>
+   <div name="DIV"></div>
+   <div name="DIV"></div>
+</body>
+
+</html>
