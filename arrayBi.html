@@ -1,0 +1,120 @@
+<SCRIPT language='JavaScript'>
+
+   function disegna(a,maxvett)
+   {
+      document.write("<TABLE border='1'>");
+      for(j=0;j<r;j++)  
+      {
+         document.write("<TR>");
+        for(i=0;i<c;i++)  
+        {
+          if(a[j][i]==maxvett)
+         {
+              document.write("<TD style='background-color:rgb(255,0,0);color:rgb(255,255,255);'>");
+         }
+         else
+         {
+              document.write("<TD>");
+           }
+         
+          n = a[j][i];
+           document.write("&nbsp;"+n+"&nbsp;");
+         
+           document.write("</TD>");
+        }	
+         document.write("</TR>");
+      }
+      document.write("</TABLE>");
+   }
+   
+   function array2()
+   {
+   
+      minimo=1;
+      massimo=99;
+   
+      r = parseInt(document.F1.R.value);
+      c = parseInt(document.F1.C.value);
+      
+      a = new Array();
+      b = new Array();
+      d = new Array();
+      for(j=0;j<r;j++)  
+      {
+         a[j] = new Array();
+         b[j] = new Array();
+         d[j] = new Array();
+         for(i=0;i<c;i++)  
+         {
+            a[j][i] = parseInt(Math.random()*(massimo-minimo+1))+minimo;
+            b[j][i] = a[j][i];
+            d[j][i] = a[j][i];
+        }	 
+      }
+      
+      maxvett=0;
+      for(j=0;j<r;j++)  
+      {
+         for(i=0;i<c;i++)  
+         {
+            if(a[j][i]>maxvett)
+           {
+              maxvett=a[j][i];
+           }
+         }
+      }
+      disegna(a,maxvett);
+      
+      for(j=0;j<r;j++)
+      {
+         for(i=0;i<c-1;i++)
+         {
+            for(k=i+1;k<c;k++)
+            {
+               if(b[j][i]>b[j][k])
+               {
+                  s=b[j][i];
+                  b[j][i]=b[j][k];
+                  b[j][k]=s;                               
+               }                                     
+            }  
+         } 
+      }
+      document.write("<BR>");
+      disegna(b,0);
+      
+      for(i=0;i<c;i++)
+      {
+         for(j=0;j<r-1;j++)
+         {
+            for(k=j+1;k<r;k++)
+            {
+               if(d[j][i]>d[k][i])
+               {
+                  s=d[j][i];
+                  d[j][i]=d[k][i];
+                  d[k][i]=s;                               
+               }                                     
+            }  
+         } 
+      }
+      document.write("<BR>");
+      disegna(d,0);
+      
+      document.write("<BR><BR><A href='array2.html'>Indietro</A>");
+   }   
+   </SCRIPT>
+   
+   <HTML>
+   <BODY>
+   
+   <H2>array bidimensionale</H2>
+   
+   <FORM name='F1'>
+      righe:&nbsp;&nbsp;&nbsp;<INPUT type='text' name='R' size='3' value='0'>
+      colonne:&nbsp;<INPUT type='text' name='C' size='3' value='0'>
+      <INPUT type='button' name='B' value='Genera' onClick='array2()'>
+   </FORM>
+   
+   </BODY>
+   </HTML>
